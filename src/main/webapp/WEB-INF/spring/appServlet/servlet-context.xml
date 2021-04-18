@@ -9,6 +9,11 @@
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
 	
+	
+	<!-- config파일 자동 로드 location="classpath:database.properties"  /!-->
+    <context:property-placeholder location="/WEB-INF/config/*.properties" /> 
+    
+    
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 
