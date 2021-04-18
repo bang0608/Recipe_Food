@@ -6,12 +6,20 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		
 		
+	<!-- properties -->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations" value="classpath:/config.properties" />
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+        <property name="fileEncoding" value="UTF-8" />
+    </bean>	
+	
+	
 		<!-- MariaDB JDBC DataSource -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-			<property name="driverClassName" value="${spring.datasource.driverClassName}" />
-   		 <property name="url" value="${spring.datasource.url}" />
-    	<property name="username" value="${spring.datasource.username}" />
-    	<property name="password" value="${spring.datasource.password}" />
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+   		<property name="url" value="${jdbc.url}" />
+    	<property name="username" value="${jdbc.username}" />
+    	<property name="password" value="${jdbc.password}" />
 	
 	</bean>
     
