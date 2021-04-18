@@ -7,7 +7,7 @@
 > * 이호성 (총괄 & 백엔드) : [https://github.com/hoseong1324](https://github.com/hoseong1324)
 > * 박주선 (백엔드) : [https://github.com/juseon-park](https://github.com/juseon-park)
 > * 방현우 (백엔드 & 인프라 구축) : [https://github.com/bang0608](https://github.com/bang0608)
-> * 김성빈 (디자인 & 퍼블리싱) : To Be Update Later
+> * 김성빈 (디자인 & 퍼블리싱) : [https://github.com/kim-1997](https://github.com/kim-1997)
 
 -----
 
