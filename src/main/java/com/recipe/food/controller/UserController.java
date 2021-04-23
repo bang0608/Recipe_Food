@@ -5,12 +5,16 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import com.recipe.food.service.UserService;
+import com.recipe.food.vo.UserVO;
 
 @Controller
 public class UserController {
@@ -44,9 +48,23 @@ public class UserController {
 		return result;
 	}
 	@RequestMapping("/login")
-	public String login(@RequestParam String id, @RequestParam String pw) {
+	public String login(UserVO vo,HttpServletRequest req) {
 		
-		return "home";
+		HttpSession session =  req.getSession();
+		// 서비스 호출하여 vo 데이터 가져옴
+		UserVO login = userSerivce.login(vo);
+		
+		// 입력한 비밀번호와 데이터베이스 내의 비밀번호 같은지 체크 
+		boolean pwMatch = passwordEncoder.matches(vo.getPw(), login.getPw());
+		
+		// 같으면 
+		if (pwMatch == true) {
+			session.setAttribute("user", login);
+		} else {
+			session.setAttribute("user", null);
+		}
+		
+		return "main";
 	}
 
 	

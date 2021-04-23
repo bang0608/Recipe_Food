@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.recipe.food.dao.*;
+import com.recipe.food.vo.UserVO;
 
 @Service
 public class UserServiceImpl implements UserService{
@@ -22,6 +23,10 @@ public class UserServiceImpl implements UserService{
 			result = "0";
 		}
 		return result;
+	}
+	
+	public UserVO login(UserVO vo){
+		return dao.login(vo);
 	}
 	
 }

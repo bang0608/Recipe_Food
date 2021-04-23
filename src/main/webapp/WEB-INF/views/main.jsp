@@ -27,7 +27,7 @@
             </div>
             <div class="logo"><a href="#"><img src="<c:url value='/resources/img/logo.png'/>"></a></div>
             <div class="join">
-                <a href="#"><span>로그인</span></a>
+                <a href="./login?id=2&pw=2"><span>로그인</span></a>
                 <a href="#"><span>회원가입</span></a>
             </div>
         </div>

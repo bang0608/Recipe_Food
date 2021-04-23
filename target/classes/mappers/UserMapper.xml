@@ -3,10 +3,15 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="UserMapper">
 
+<!--  회원 가입   -->
 <insert id="register" parameterType="Map">
 insert into USER ( id, pw, address, phone_number)
 values (#{id}, #{pw}, #{address}, #{phone_number})
 </insert>
 
+<!-- 로그인 -->
+<select id="login" resultType="com.recipe.food.vo.UserVO">
+select * from USER
+</select>
 
 </mapper>

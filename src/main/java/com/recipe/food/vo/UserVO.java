@@ -34,6 +34,10 @@ public class UserVO {
 	public void setPhone_number(String phone_number) {
 		this.phone_number = phone_number;
 	}
+	@Override
+	public String toString() {
+		return "UserVO [id=" + id + ", pw=" + pw + ", address=" + address + ", phone_number=" + phone_number + "]";
+	}
 	
 	
 	
