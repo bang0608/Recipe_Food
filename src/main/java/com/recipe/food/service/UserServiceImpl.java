@@ -13,10 +13,10 @@ import com.recipe.food.dao.*;
 public class UserServiceImpl implements UserService{
 	@Autowired
 	UserDAO dao;
-	public String register(Map<Object, Object> data) {
+	public String register(Map<Object, Object> registerMap) {
 		String result = "";
 		try {
-			dao.register(data);
+			dao.register(registerMap);
 			result = "1";
 		} catch (Exception e) {
 			result = "0";

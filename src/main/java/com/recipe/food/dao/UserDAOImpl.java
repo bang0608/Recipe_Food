@@ -13,7 +13,7 @@ public class UserDAOImpl implements UserDAO{
 	@Autowired
 	private SqlSession sqlSession;
 	@Override
-	public void register(Map<Object, Object> data) {
-		sqlSession.insert("UserMapper.register",data);
+	public void register(Map<Object, Object> registerMap) {
+		sqlSession.insert("UserMapper.register",registerMap);
 	}
 }

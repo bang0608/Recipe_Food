@@ -7,5 +7,5 @@ import org.springframework.stereotype.Service;
 
 
 public interface UserService {
-	String register(Map<Object, Object> data);
+	String register(Map<Object, Object> registerMap);
 }
