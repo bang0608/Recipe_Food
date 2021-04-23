@@ -15,13 +15,18 @@ import com.recipe.food.service.UserService;
 public class UserController {
 	@Autowired
 	UserService userSerivce;
+	
 	@RequestMapping("/register")
 	public String register(@RequestParam Map<Object, Object> data) {
 		String result = userSerivce.register(data);
 
 		return result;
 	}
-	
+	@RequestMapping("/login")
+	public String login(@RequestParam String id, @RequestParam String pw) {
+		
+		return "home";
+	}
 
 	
 	
