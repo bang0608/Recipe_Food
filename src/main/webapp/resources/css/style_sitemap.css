@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+.cfx:after{display:block;clear:both;content:"";} /* float 해제 */
+* {
+	margin: 0; padding: 0; list-style: none; 
+	text-decoration: none;
+	font-family: 'Noto Sans KR', sans-serif;
+	box-sizing: border-box;
+}
+@font-face { 
+  src: url("../font/SSFlowerRoadRegular.ttf"); 
+  font-family: "FlowerRoad";
+}
+@font-face { 
+  src: url("../font/SSShinb7Regular.ttf"); 
+  font-family: "Shinb";
+}
+a { color: #000; }
+
+
+
+
+
+#wrap { border: 1px solid #000; }
+
+#header { 
+  border: 1px solid red; display: flex; justify-content: space-between; align-items: center;
+  /*padding: 5px 30px;*/
+}
+#header .empty {border: 1px solid #000; width: 100%; flex: 1; text-align: center;}
+#header .logo {border: 1px solid #000; width: 100%;flex: 3; text-align: center; }
+#header .join {border: 1px solid #000;width: 100%;flex: 1; text-align: right;}
+
+#nav { width: 100%; margin: 0 auto;}
+#nav ul { display: flex; justify-content: space-around; width: 1200px; margin: 0 auto;border: 1px solid #000;}
+#nav ul li { display: block; width: 100%; text-align: center;border: 1px solid #000;}
+#nav ul li a { width: 100%; display: block; padding: 10px 0;border: 1px solid blue;}
+
+
+#container { border: 1px solid #000; }
+.container_box { 
+  border: 1px solid red; width: 1200px; height: 600px; margin: 0 auto;
+  align-items: center; display: flex; justify-content: center; flex-direction: column;
+}
+.list_box { display: flex; justify-content: space-around; width: 100%; }
+.list_box h3 { margin: 10px 0 15px 0; font-size: 24px; padding-left: 15px; padding-bottom: 10px; }
+.list_box p { margin: 0 0 10px 20px; }
+.list_box div[class^="box"] { width: 230px; height: 230px;}
+h1 {  display: block; height: 20%; margin-top: -40px;}
+
+
+
+
+#footer { width: 100%; border: 1px solid blue;}
+.footer_box { width: 1200px; border: 1px solid green; margin: 0 auto; text-align: center;}
+
+
+
+
+
+
+
+
+
+
+
+
+
