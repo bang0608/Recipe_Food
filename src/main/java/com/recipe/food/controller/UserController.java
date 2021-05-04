@@ -57,7 +57,7 @@ public class UserController {
 		// 입력한 비밀번호와 데이터베이스 내의 비밀번호 같은지 체크 
 		boolean pwMatch = passwordEncoder.matches(vo.getPw(), login.getPw());
 		
-		// 같으면 
+		// 같으면 세션에 login 데이터 넘김
 		if (pwMatch == true) {
 			session.setAttribute("user", login);
 		} else {
@@ -66,6 +66,7 @@ public class UserController {
 		
 		return "main";
 	}
+	
 
 	
 	

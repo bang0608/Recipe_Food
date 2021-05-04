@@ -5,8 +5,8 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<title>메인메뉴</title>
-	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style.css'/>">
+	<title>회원 가입</title>
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style_join.css'/>">
     <link rel="stylesheet" href="<c:url value='/resources/css/swiper.min.css'/>">
 	<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -15,19 +15,16 @@
 	<script src="<c:url value='/resources/js/jquery-3.3.1.min.js'/>"></script>
 </head>
 <body>
-    
+    <div id="wrap">
 
         <div id="header">
-            <div class="search">
-                <input type="text" name="" placeholder="레시피 검색">
-                <button>검색</button>
-            </div>
+            <div class="empty"></div>
             <div class="logo"><a href="main.html"><img src="<c:url value='/resources/img/logo.png'/>"></a></div>
+
             <div class="join">
                 <a href="#pop"><span>로그인</span></a>
-                <a href="./url/registerView"><span>회원가입</span></a>
+                <a href="#"><span>회원가입</span></a>
             </div>
-
             <!-- 로그인 모달 -->
             <div class="modal" id="pop">
                 <a href="#">X</a>
@@ -88,11 +85,38 @@
             </ul>
         </div>
 
-        <div id="visual">
-            <div class="visual_box">
-                
+        <div id="container">
+            <div class="container_box">
+                <h1>회원가입</h1>
+                <div class="join2">
+                    <form>
+                        <label for="name">이름</label>
+                        <input type="text" id="name" name="name" placeholder="이름">
+                        <label for="id">아이디</label>
+                        <input type="text" id="id" name="id" placeholder="아이디">
+                        <label for="pw">비밀번호</label>
+                        <input type="password" id="pw" name="pw" placeholder="비밀번호"> 
+                        <label for="pw_s">비밀번호 확인</label>
+                        <input type="password" id="pw_s" name="pw_s" placeholder="비밀번호 확인">
+                        <label for="email">이메일</label>
+                        <input type="email" id="email" name="email" placeholder="이메일">
+                        
+                        <div class="food_select">
+                            <select>
+                                <option>한식</option>
+                                <option>중식</option>
+                                <option>일식</option>
+                                <option>양식</option>
+                            </select>
+                            <input type="text" placeholder="기타">
+                        </div>
+                    </form>
+                </div>
+                <div class="btn">
+                    <button type="submit">가입</button>
+                    <button type="reset">취소</button>
+                </div>
             </div>
-            <!-- 슬라이드 또는 애니메이션 처리 -->
         </div>
 
         <div id="footer">
@@ -105,7 +129,7 @@
             </div>      
         </div>
 
- 
+    </div>
 
 
     

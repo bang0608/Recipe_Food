@@ -1,38 +1,87 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 	pageEncoding="UTF-8"%>
-<html lang="ko">
+<html>
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<title>개인정보처리방침</title>
-	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style_information.css'/>">
-    <link rel="stylesheet" href="<c:url value='/resources/css/swiper.min.css'/>">
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resouces/css/style_information.css'/>">
+    <link rel="stylesheet" href="<c:url value='/resouces/css/swiper.min.css'/>">
 	<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-	<script src="<c:url value='/resources/js/write.js'/>"></script>
-	<script src="<c:url value='/resources/js/jquery-3.3.1.min.js'/>"></script>
+	<script src="<c:url value='/resouces/js/write.js'/>"></script>
+	<script src="<c:url value='/resouces/js/jquery-3.3.1.min.js'/>"></script>
 </head>
 <body>
-    <div id="wrap">
 
         <div id="header">
             <div class="empty"></div>
-            <div class="logo"><a href="#"><img src="<c:url value='/resources/img/logo.png'/>"></a></div>
+            <div class="logo"><a href="#"><img src="img/logo.png"></a></div>
 
             <div class="join">
-                <a href="#"><span>로그인</span></a>
-                <a href="#"><span>회원가입</span></a>
+                <a href="#pop"><span>로그인</span></a>
+                <a href="join.html"><span>회원가입</span></a>
+
             </div>
+            <!-- 로그인 모달 -->
+        <div class="modal" id="pop">
+            <a href="#">X</a>
+            <section class="log">
+                <h1>환영합니다</h1>
+                <form>
+                    <div class="id_box">
+                        <input type="text" name="id" id="id" placeholder="ID">
+                        <label for="id">아이디</label>
+                    </div>
+                    <div class="pw_box">
+                        <input type="text" name="pw" id="pw" placeholder="PASSWORD">
+                        <label for="pw">비밀번호</label>
+                    </div>
+                    <div class="login_btn">
+                        <button type="submit">로그인</button>
+                    </div>
+                    <div class="other_login">
+                        <div class="other_btn">
+                            <button type="submit"><img src="<c:url value='/resouces/img/naver.png'/>"><span style="margin-left: 10px">네이버 로그인</span></button>
+                        </div>
+                        <div class="other_btn">
+                            <button type="submit"><img src="<c:url value='/resouces/img/google.png'/>"><span style="margin-left: 10px">구글 로그인</span></button>
+                        </div>
+                        <div class="other_btn">
+                            <button type="submit"><img src="<c:url value='/resouces/img/kakao.png'/>"><span style="margin-left: 10px">카카오 로그인</span></button>
+                        </div>
+                        </div>
+                    <div class="join_btn">
+                        <button type="button">회원가입</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+        <div class="modal_bg"></div>
+        <!-- 로그인 모달 -->
         </div>
 
         <div id="nav">
             <ul>
-                <li><a href="#">음식레시피</a></li>
-                <li><a href="#">추천레시피</a></li>
-                <li><a href="#">Q&A</a></li>
-                <li><a href="#">공지사항</a></li>
+                <li><a href="menu1_foodrecipe.html">음식레시피</a></li>
+                <li><a href="menu2_recommendrecipe .html">추천레시피</a>
+                    <ul class="sub1">
+                        <li><a href="#">레시피쿡 추천</a></li>
+                        <li><a href="#">댓글별</a></li>
+                        <li><a href="#">즐겨찾기별</a></li>
+                        <li><a href="#">실시간인기</a></li>
+                    </ul>
+                </li>
+                <li><a href="qna.html">Q&A</a></li>
+                <li><a href="#">공지사항</a>
+                    <ul class="sub2">
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="information.html">개인정보처리방침</a></li>
+                        <li><a href="sitemap.html">사이트맵</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
@@ -74,7 +123,7 @@
             </div>      
         </div>
 
-    </div>
+    
 
 
     

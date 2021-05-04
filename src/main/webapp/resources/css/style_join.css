@@ -16,22 +16,18 @@
   font-family: "Shinb";
 }
 a { color: #000; }
-html, body { height: 100vh; width: 100%; }
 
+
+
+html, body { height: 100vh;}
 
 
 
 #header { 
   border-bottom: 1px solid #ccc; display: flex; justify-content: space-between; align-items: center;
-  /*padding: 5px 30px;*/ background: #fff; 
+  /*padding: 5px 30px;*/ 
 }
-#header .search { width: 100%; flex: 1; text-align: center;}
-#header .search input { width: 50%; height: 30px; text-indent: 5px; border-radius: 10px; border: 1px solid #ccc;}
-#header .search button { 
-  height: 30px; padding: 0 10px; background: #6ecbd6; border: none; border-radius: 10px; color:#fff;
-  cursor: pointer;
-}
-#header .search button:hover { color: #000;}
+#header .empty {  width: 100%; flex: 1; text-align: center;}
 #header .logo { width: 100%;flex: 2; text-align: center; }
 #header .join { width: 100%;flex: 1; text-align: right; margin-right: 10px; font-size: 13px;}
 #header .join a { background: #6ecbd6; height: 20px; border-radius: 20px; padding: 10px; color: #fff; font-weight: bold;}
@@ -60,32 +56,35 @@ html, body { height: 100vh; width: 100%; }
 #nav .sub2 li:hover a { background: #29becf; }
 
 
-#visual { margin: 20px 0 20px 0; }
-.visual_box { 
-  width: 1300px; height: 700px; margin: 0 auto;
-  text-align: center; line-height: 600px;
-  border-radius: 50px; box-shadow:  3px 3px 4px -4px black;
-  background: #eae8e8; 
-  
-  animation: bg 10s ease infinite;
+#container { height: 730px; }
+.container_box { 
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc; width: 1200px;  margin: 0 auto; height: 100%;
 }
+.join2 { border: 3px solid #29becf;; width: 60%; margin: 0 auto; padding: 20px 0 40px 0; border-radius: 10px;}
+
+.container_box h1 { text-align: center; padding-top: 70px; padding-bottom: 20px;}
+.container_box form { display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.container_box form > input { width: 55%; height: 50px; text-indent: 8px;}
+.container_box form label { text-indent: -9999px;}
+::placeholder { font-size: 15px;}
+
+.food_select { display: flex; width: 55%;}
+.food_select select {flex:1;  padding: 5px 0; margin: 20px 5px 0 0;}
+.food_select input { flex:4; margin: 20px 0 0 0; text-indent: 8px;}
+
+.btn{ display: flex; justify-content: center;}
+.btn button { padding: 3px 10px; margin: 15px 3px 0 3px; cursor: pointer;}
+
+
+
 
 
 #footer { 
-  width: 100%; border-top: 1px solid #ccc;  background: #6ecbd6;  color: #fff;
-  padding: 5px 0;
+  width: 100%; border-top: 1px solid #ccc;  background: #6ecbd6; color: #fff;
+   padding: 5px 0;
 }
 .footer_box { width: 1200px; margin: 0 auto; text-align: center; font-size: 13px;  }
-
-
-@keyframes bg {
-  0% { background: url(../img/bg2.jpg) no-repeat center/cover;}
-  25% { background: url(../img/bg1.jpg) no-repeat center/cover;}
-  25% { background: url(../img/bg3.jpg) no-repeat center/cover;}
-  75% { background: url(../img/bg3.jpg) no-repeat center/cover;}
-  75% { background: url(../img/bg1.jpg) no-repeat center/cover;}
-  100% { background: url(../img/bg2.jpg) no-repeat center/cover;}
-}
 
 /* 로그인 모달 */
 .modal {
