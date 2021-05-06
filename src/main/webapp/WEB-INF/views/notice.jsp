@@ -5,8 +5,8 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<title>메인메뉴</title>
-	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style.css'/>">
+	<title>공지사항</title>
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style_notice.css'/>">
     <link rel="stylesheet" href="<c:url value='/resources/css/swiper.min.css'/>">
 	<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
@@ -18,16 +18,13 @@
     
 
         <div id="header">
-            <div class="search">
-                <input type="text" name="" placeholder="레시피 검색">
-                <button>검색</button>
-            </div>
+            <div class="empty"></div>
             <div class="logo"><a href="main.html"><img src="<c:url value='/resources/img/logo.png'/>"></a></div>
+
             <div class="join">
                 <a href="#pop"><span>로그인</span></a>
-                <a href="./url/registerView"><span>회원가입</span></a>
+                <a href="join.html"><span>회원가입</span></a>
             </div>
-
             <!-- 로그인 모달 -->
             <div class="modal" id="pop">
                 <a href="#">X</a>
@@ -88,11 +85,100 @@
             </ul>
         </div>
 
-        <div id="visual">
-            <div class="visual_box">
-                
+        <div id="container">
+            <div class="container_box">
+                <h1>공지사항</h1>
+                <div id="search_box">
+                    <select style="padding: 2px 0;">
+                        <option>작성자</option>
+                        <option>제목</option>
+                        <option>작성자+제목</option>
+                    </select>
+                    <input type="text" style="padding: 2px 0;">
+                    <button id="search" style="padding: 2px 5px;">검색</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 10%">번호</th>
+                            <th style="width: 70%">제목</th>
+                            <th style="width: 10%">작성자</th>
+                            <th style="width: 10%">조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="#">공지사항</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="#">공지사항</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="#">공지사항</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="#">공지사항</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><a href="#">공지사항</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><a href="#">공지사항</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><a href="#">공지사항</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><a href="#">공지사항</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><a href="#">공지사항</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table_num">
+                    <ul>
+                        <li><a href="#"><<</a></li>
+                        <li><a href="#"><</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">></a></li>
+                        <li><a href="#">>></a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- 슬라이드 또는 애니메이션 처리 -->
         </div>
 
         <div id="footer">
@@ -105,7 +191,7 @@
             </div>      
         </div>
 
- 
+    
 
 
     

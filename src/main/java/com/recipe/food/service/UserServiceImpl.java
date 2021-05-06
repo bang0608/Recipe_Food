@@ -8,20 +8,25 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.recipe.food.dao.*;
+import com.recipe.food.vo.UserVO;
 
 @Service
 public class UserServiceImpl implements UserService{
 	@Autowired
 	UserDAO dao;
-	public String register(Map<Object, Object> data) {
+	public String register(Map<Object, Object> registerMap) {
 		String result = "";
 		try {
-			dao.register(data);
+			dao.register(registerMap);
 			result = "1";
 		} catch (Exception e) {
 			result = "0";
 		}
 		return result;
+	}
+	
+	public UserVO login(UserVO vo){
+		return dao.login(vo);
 	}
 	
 }

@@ -6,7 +6,10 @@ public class UserVO {
 	private String id;
 	private String pw;
 	private String address;
-	private int tel;
+	private String phone_number;
+	
+	
+	
 	public String getId() {
 		return id;
 	}
@@ -25,12 +28,17 @@ public class UserVO {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public int getTel() {
-		return tel;
+	public String getPhone_number() {
+		return phone_number;
 	}
-	public void setTel(int tel) {
-		this.tel = tel;
+	public void setPhone_number(String phone_number) {
+		this.phone_number = phone_number;
 	}
+	@Override
+	public String toString() {
+		return "UserVO [id=" + id + ", pw=" + pw + ", address=" + address + ", phone_number=" + phone_number + "]";
+	}
+	
 	
 	
 }

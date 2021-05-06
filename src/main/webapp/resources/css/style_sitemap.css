@@ -21,26 +21,49 @@ a { color: #000; }
 
 
 
-#wrap { border: 1px solid #000; }
+html, body { height: 100vh;}
+
+
 
 #header { 
-  border: 1px solid red; display: flex; justify-content: space-between; align-items: center;
-  /*padding: 5px 30px;*/
+  border-bottom: 1px solid #ccc; display: flex; justify-content: space-between; align-items: center;
+  /*padding: 5px 30px;*/ 
 }
-#header .empty {border: 1px solid #000; width: 100%; flex: 1; text-align: center;}
-#header .logo {border: 1px solid #000; width: 100%;flex: 3; text-align: center; }
-#header .join {border: 1px solid #000;width: 100%;flex: 1; text-align: right;}
+#header .empty {  width: 100%; flex: 1; text-align: center;}
+#header .logo { width: 100%;flex: 2; text-align: center; }
+#header .join { width: 100%;flex: 1; text-align: right; margin-right: 10px; font-size: 13px;}
+#header .join a { background: #6ecbd6; height: 20px; border-radius: 20px; padding: 10px; color: #fff; font-weight: bold;}
+#header .join a:nth-child(2) { margin-left: 10px;}
 
-#nav { width: 100%; margin: 0 auto;}
-#nav ul { display: flex; justify-content: space-around; width: 1200px; margin: 0 auto;border: 1px solid #000;}
-#nav ul li { display: block; width: 100%; text-align: center;border: 1px solid #000;}
-#nav ul li a { width: 100%; display: block; padding: 10px 0;border: 1px solid blue;}
+#header .join a:hover { color : #000;}
+
+#nav { width: 100%; margin: 0 auto; background: #6ecbd6; box-shadow:  0 5px 4px -4px black;}
+#nav ul { display: flex; justify-content: space-around; width: 1200px; margin: 0 auto; position: relative;}
+#nav ul li { display: block; width: 100%; text-align: center; transition: all 0.2s;}
+#nav ul li a { width: 100%; display: block; padding: 10px 0;border: 1px solid #9fd9e0; color: #fff;}
+#nav ul .sub1 { 
+  display: flex; flex-direction: column; position: absolute; top: 100%; left: 25%; width: 25%; display: none;
+}
+#nav ul .sub2 { display: flex; flex-direction: column; position: absolute; top: 100%; left: 75%; width: 25%; display: none;}
+#nav .sub1 a {  background: #6ecbd6; }
+#nav .sub2 a { background: #6ecbd6;}
 
 
-#container { border: 1px solid #000; }
+#nav li:hover { background: #29becf; }
+#nav a:hover { color: #000;}
+#nav ul > li:nth-child(2):hover .sub1 { display: block; box-shadow:  0 5px 4px -4px black;}
+#nav ul > li:nth-child(4):hover .sub2 { display: block; box-shadow:  0 5px 4px -4px black;}
+
+#nav .sub1 li:hover a { background: #29becf; }
+#nav .sub2 li:hover a { background: #29becf; }
+
+
+#container {  height: 730px;}
 .container_box { 
-  border: 1px solid red; width: 1200px; height: 600px; margin: 0 auto;
+  width: 1200px; height: 730px; margin: 0 auto;
   align-items: center; display: flex; justify-content: center; flex-direction: column;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
 }
 .list_box { display: flex; justify-content: space-around; width: 100%; }
 .list_box h3 { margin: 10px 0 15px 0; font-size: 24px; padding-left: 15px; padding-bottom: 10px; }
@@ -51,8 +74,74 @@ h1 {  display: block; height: 20%; margin-top: -40px;}
 
 
 
-#footer { width: 100%; border: 1px solid blue;}
-.footer_box { width: 1200px; border: 1px solid green; margin: 0 auto; text-align: center;}
+#footer { 
+  width: 100%; border-top: 1px solid #ccc;  background: #6ecbd6; color: #fff;
+   padding: 5px 0;
+}
+.footer_box { width: 1200px; margin: 0 auto; text-align: center; font-size: 13px;  }
+
+/* 로그인 모달 */
+.modal {
+  z-index: 0;
+  position: absolute;
+  left: 35%; top: 25%;
+  width: 450px; height: 480px;
+  background-color: rgba(255,255,255,0.8);
+  text-align: right; padding: 15px;
+  display: none; box-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+  transition: all 0.6s;
+  border-radius: 20px;
+
+}
+#pop > a { color: grey; text-decoration: none; font-size: 18px;}
+.modal:target { display: block; z-index: 2;}
+.modal:target + .modal_bg { opacity: 1; z-index: 1; }
+
+.modal_bg{ 
+   position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+   background: rgba(0,0,0,0.8); opacity: 0; z-index: -1;
+   transition: all 0.6s;
+}
+
+.log { /*border: 1px solid red;*/ text-align: center; margin-top: 30px; position: relative;}
+.log h1 { font-size: 40px; margin-bottom: 30px; color: #6ecbd6;}
+
+
+.id_box { padding: 5px 0; }
+.id_box input { 
+width: 90%; padding: 20px 0 0 0; border: none; outline: none;
+border-bottom: 1px solid #999; text-indent: 2px; background: transparent;
+}
+.id_box label { position: absolute; top: 85px; left: 22px; font-size: 14px; font-weight: bold;}
+
+.pw_box { padding: 5px 0; margin-top: 10px;}
+.pw_box input { 
+width: 90%; padding: 20px 0 0 0; border: none; outline: none;
+border-bottom: 1px solid #999; text-indent: 2px; background: transparent;
+}
+.pw_box label { position: absolute; top: 143px; left: 22px; font-size: 14px; font-weight: bold;}
+
+.login_btn button{ 
+width: 90%; padding: 10px 0; margin-top: 25px; 
+background: #6ecbd6;; border: none; cursor: pointer; color: #fff;
+border-radius: 10px;
+}
+.other_login { display: flex; width: 90%; margin: 0 auto;  margin-top: 8px;}
+.other_btn { flex: 1; position: relative; }
+.other_btn button{ width: 100%; height: 30px; border-radius: 10px; border: none; cursor: pointer;}
+.other_btn img {width: 20px; height: 20px; position: absolute; left: 8px; top: 6px;}
+
+.other_login div:nth-child(1) button { background: #00bf18;}
+.other_login div:nth-child(2) button { background: #fff;}
+.other_login div:nth-child(3) button { background: #fae100;}
+
+
+.join_btn button { 
+outline: none; border: none; background-color: transparent; cursor: pointer;
+margin-top: 10px; font-size: 14px; font-weight: bold;
+}
+
+/* 로그인 모달 */
 
 
 

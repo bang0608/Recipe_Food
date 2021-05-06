@@ -5,29 +5,26 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-	<title>메인메뉴</title>
-	<link rel="stylesheet" type="text/css" href="<c:url value='/resources/css/style.css'/>">
-    <link rel="stylesheet" href="<c:url value='/resources/css/swiper.min.css'/>">
+	<title>레시피추천</title>
+	<link rel="stylesheet" type="text/css" href="<c:url value='/resouces/css/style_recommendrecipe.css'/>">
+    <link rel="stylesheet" href="<c:url value='/resouces/css/swiper.min.css'/>">
 	<!-- <link rel="shortcut icon" href="img/favicon.ico"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-	<script src="<c:url value='/resources/js/write.js'/>"></script>
-	<script src="<c:url value='/resources/js/jquery-3.3.1.min.js'/>"></script>
+	<script src="<c:url value='/resouces/js/write.js'/>"></script>
+	<script src="<c:url value='/resouces/js/jquery-3.3.1.min.js'/>"></script>
 </head>
 <body>
     
 
         <div id="header">
-            <div class="search">
-                <input type="text" name="" placeholder="레시피 검색">
-                <button>검색</button>
-            </div>
+            <div class="empty"></div>
             <div class="logo"><a href="main.html"><img src="<c:url value='/resources/img/logo.png'/>"></a></div>
+
             <div class="join">
                 <a href="#pop"><span>로그인</span></a>
-                <a href="./url/registerView"><span>회원가입</span></a>
+                <a href="join.html"><span>회원가입</span></a>
             </div>
-
             <!-- 로그인 모달 -->
             <div class="modal" id="pop">
                 <a href="#">X</a>
@@ -47,13 +44,13 @@
                         </div>
                         <div class="other_login">
                             <div class="other_btn">
-                                <button type="submit"><img src="<c:url value='/resources/img/naver.png'/>"><span style="margin-left: 10px">네이버 로그인</span></button>
+                                <button type="submit"><img src="<c:url value='/resouces/img/naver.png'/>"><span style="margin-left: 10px">네이버 로그인</span></button>
                             </div>
                             <div class="other_btn">
-                                <button type="submit"><img src="<c:url value='/resources/img/google.png'/>"><span style="margin-left: 10px">구글 로그인</span></button>
+                                <button type="submit"><img src="<c:url value='/resouces/img/google.png'/>"><span style="margin-left: 10px">구글 로그인</span></button>
                             </div>
                             <div class="other_btn">
-                                <button type="submit"><img src="<c:url value='/resources/img/kakao.png'/>"><span style="margin-left: 10px">카카오 로그인</span></button>
+                                <button type="submit"><img src="<c:url value='/resouces/img/kakao.png'/>"><span style="margin-left: 10px">카카오 로그인</span></button>
                             </div>
                             </div>
                         <div class="join_btn">
@@ -88,11 +85,29 @@
             </ul>
         </div>
 
-        <div id="visual">
-            <div class="visual_box">
-                
+        <div id="container">
+            <div class="container_box">
+                <h1>추천레시피</h1>
+
+                <div class="list_box">
+                    <div class="box1">이미지1<br>타이틀</div>
+                    <div class="box2">이미지2<br>타이틀</div>
+                    <div class="box3">이미지3<br>타이틀</div>
+                    <div class="box4">이미지4<br>타이틀</div>
+                    <div class="box5">이미지5<br>타이틀</div>
+                    <div class="box6">이미지6<br>타이틀</div>
+                    <div class="box7">이미지7<br>타이틀</div>
+                    <div class="box8">이미지8<br>타이틀</div>
+                </div>
+                <div class="lnb">
+                    <select style="padding: 5px 10px;">
+                        <option>레시피쿡 추천</option>
+                        <option>즐겨찾기별</option>
+                        <option>댓글별</option>
+                        <option>실시간인기</option>
+                    </select>
+                </div>
             </div>
-            <!-- 슬라이드 또는 애니메이션 처리 -->
         </div>
 
         <div id="footer">
@@ -105,7 +120,7 @@
             </div>      
         </div>
 
- 
+    
 
 
     

@@ -16,22 +16,19 @@
   font-family: "Shinb";
 }
 a { color: #000; }
-html, body { height: 100vh; width: 100%; }
+table { border-collapse: collapse; width: 80%; margin: 0 auto;}
+th,td { border: 1px solid #000; padding: 5px 0;}
 
+
+html, body { height: 100vh;}
 
 
 
 #header { 
   border-bottom: 1px solid #ccc; display: flex; justify-content: space-between; align-items: center;
-  /*padding: 5px 30px;*/ background: #fff; 
+  /*padding: 5px 30px;*/ 
 }
-#header .search { width: 100%; flex: 1; text-align: center;}
-#header .search input { width: 50%; height: 30px; text-indent: 5px; border-radius: 10px; border: 1px solid #ccc;}
-#header .search button { 
-  height: 30px; padding: 0 10px; background: #6ecbd6; border: none; border-radius: 10px; color:#fff;
-  cursor: pointer;
-}
-#header .search button:hover { color: #000;}
+#header .empty {  width: 100%; flex: 1; text-align: center;}
 #header .logo { width: 100%;flex: 2; text-align: center; }
 #header .join { width: 100%;flex: 1; text-align: right; margin-right: 10px; font-size: 13px;}
 #header .join a { background: #6ecbd6; height: 20px; border-radius: 20px; padding: 10px; color: #fff; font-weight: bold;}
@@ -60,32 +57,28 @@ html, body { height: 100vh; width: 100%; }
 #nav .sub2 li:hover a { background: #29becf; }
 
 
-#visual { margin: 20px 0 20px 0; }
-.visual_box { 
-  width: 1300px; height: 700px; margin: 0 auto;
-  text-align: center; line-height: 600px;
-  border-radius: 50px; box-shadow:  3px 3px 4px -4px black;
-  background: #eae8e8; 
-  
-  animation: bg 10s ease infinite;
+#container {  height: 730px; }
+.container_box { 
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc; width: 1200px; height: 730px; margin: 0 auto;
+  text-align: center; 
 }
+
+.container_box button { padding: 2px 8px;  margin-top: 10px;}
+.container_box h1 { padding-top: 50px;}
+
+#table { margin-top: 20px;}
+#table td { text-align: left; padding: 10px 0; }
+#table td input, textarea { margin-left: 10px;}
+#table #title { width: 50%;}
 
 
 #footer { 
-  width: 100%; border-top: 1px solid #ccc;  background: #6ecbd6;  color: #fff;
-  padding: 5px 0;
+  width: 100%; border-top: 1px solid #ccc;  background: #6ecbd6; color: #fff;
+   padding: 5px 0;
 }
 .footer_box { width: 1200px; margin: 0 auto; text-align: center; font-size: 13px;  }
 
-
-@keyframes bg {
-  0% { background: url(../img/bg2.jpg) no-repeat center/cover;}
-  25% { background: url(../img/bg1.jpg) no-repeat center/cover;}
-  25% { background: url(../img/bg3.jpg) no-repeat center/cover;}
-  75% { background: url(../img/bg3.jpg) no-repeat center/cover;}
-  75% { background: url(../img/bg1.jpg) no-repeat center/cover;}
-  100% { background: url(../img/bg2.jpg) no-repeat center/cover;}
-}
 
 /* 로그인 모달 */
 .modal {
@@ -149,9 +142,6 @@ margin-top: 10px; font-size: 14px; font-weight: bold;
 }
 
 /* 로그인 모달 */
-
-
-
 
 
 

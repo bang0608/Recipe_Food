@@ -1,7 +1,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 	pageEncoding="UTF-8"%>
-<html lang="ko">
+<html>
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
@@ -15,85 +15,168 @@
 	<script src="<c:url value='/resources/js/jquery-3.3.1.min.js'/>"></script>
 </head>
 <body>
-    <div id="wrap">
+    
 
         <div id="header">
             <div class="empty"></div>
-            <div class="logo"><a href="#"><img src="<c:url value='/resources/img/logo.png'/>"></a></div>
+            <div class="logo"><a href="main.html"><img src="img/logo.png"></a></div>
 
             <div class="join">
-                <a href="#"><span>로그인</span></a>
-                <a href="#"><span>회원가입</span></a>
+                <a href="#pop"><span>로그인</span></a>
+                <a href="join.html"><span>회원가입</span></a>
             </div>
+            <!-- 로그인 모달 -->
+            <div class="modal" id="pop">
+                <a href="#">X</a>
+                <section class="log">
+                    <h1>환영합니다</h1>
+                    <form>
+                        <div class="id_box">
+                            <input type="text" name="id" id="id" placeholder="ID">
+                            <label for="id">아이디</label>
+                        </div>
+                        <div class="pw_box">
+                            <input type="text" name="pw" id="pw" placeholder="PASSWORD">
+                            <label for="pw">비밀번호</label>
+                        </div>
+                        <div class="login_btn">
+                            <button type="submit">로그인</button>
+                        </div>
+                        <div class="other_login">
+                            <div class="other_btn">
+                                <button type="submit"><img src="<c:url value='/resources/img/naver.png'/>"><span style="margin-left: 10px">네이버 로그인</span></button>
+                            </div>
+                            <div class="other_btn">
+                                <button type="submit"><img src="<c:url value='/resources/img/google.png'/>"><span style="margin-left: 10px">구글 로그인</span></button>
+                            </div>
+                            <div class="other_btn">
+                                <button type="submit"><img src="<c:url value='/resources/img/kakao.png'/>"><span style="margin-left: 10px">카카오 로그인</span></button>
+                            </div>
+                            </div>
+                        <div class="join_btn">
+                            <button type="button">회원가입</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <div class="modal_bg"></div>
+            <!-- 로그인 모달 -->
         </div>
 
         <div id="nav">
             <ul>
-                <li><a href="#">음식레시피</a></li>
-                <li><a href="#">추천레시피</a></li>
-                <li><a href="#">Q&A</a></li>
-                <li><a href="#">공지사항</a></li>
+                <li><a href="menu1_foodrecipe.html">음식레시피</a></li>
+                <li><a href="menu2_recommendrecipe .html">추천레시피</a>
+                    <ul class="sub1">
+                        <li><a href="#">레시피쿡 추천</a></li>
+                        <li><a href="#">댓글별</a></li>
+                        <li><a href="#">즐겨찾기별</a></li>
+                        <li><a href="#">실시간인기</a></li>
+                    </ul>
+                </li>
+                <li><a href="qna.html">Q&A</a></li>
+                <li><a href="#">공지사항</a>
+                    <ul class="sub2">
+                        <li><a href="notice.html">공지사항</a></li>
+                        <li><a href="information.html">개인정보처리방침</a></li>
+                        <li><a href="sitemap.html">사이트맵</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
         <div id="container">
             <div class="container_box">
+                <button><a href="wirte.html">글쓰기</a></button>
+                <select style="padding: 5px 5px;">
+                    <option>제목</option>
+                    <option>작성자</option>
+                    <option>제목+작성자</option>
+                </select>
                 <input type="text" name="" placeholder="레시피 검색">
-                <button>검색</button>
+                <button style="margin-right: 130px; padding: 5px 10px;">검색</button>
                 <table>
-                    <tr>
-                        <th>번호</th>
-                        <th>음식이름</th>
-                        <th>조회수</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>음식이름(1)</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>음식이름(2)</td>
-                        <td>11</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>음식이름(3)</td>
-                        <td>111</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>음식이름(4)</td>
-                        <td>22</td>
-                    </tr>
-                    <tr>
-                        <td>5</td>
-                        <td>음식이름(5)</td>
-                        <td>325</td>
-                    </tr>
-                    <tr>
-                        <td>6</td>
-                        <td>음식이름(6)</td>
-                        <td>214</td>
-                    </tr>
-                    <tr>
-                        <td>7</td>
-                        <td>음식이름(7)</td>
-                        <td>87</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th style="width: 10%">번호</th>
+                            <th style="width: 70%">제목</th>
+                            <th style="width: 10%">작성자</th>
+                            <th style="width: 10%">조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><a href="#">음식이름</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><a href="#">음식이름</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><a href="#">음식이름</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><a href="#">음식이름</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><a href="#">음식이름</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><a href="#">음식이름</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><a href="#">음식이름</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><a href="#">음식이름</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><a href="#">음식이름</a></td>
+                            <td>홍길동</td>
+                            <td>99</td>
+                        </tr>
+                    </tbody>
                 </table>
                 <div class="table_num">
-                    <a href="#"><</a>
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#">7</a>
-                    <a href="#">8</a>
-                    <a href="#">></a>
+                    <ul>
+                        <li><a href="#"><<</a></li>
+                        <li><a href="#"><</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">></a></li>
+                        <li><a href="#">>></a></li>
+                    </ul>
                 </div>
+                
             </div>
         </div>
 
@@ -107,7 +190,7 @@
             </div>      
         </div>
 
-    </div>
+    
 
 
     
